@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Style&Tech : mode, téléphones, accessoires, ordinateurs et services à domicile en Côte d'Ivoire.">
+  <title>Style&Tech — Votre style, notre priorité</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="topbar">
+    <span>🚚 Livraison rapide partout en Côte d’Ivoire</span>
+    <span>🔒 Paiement sécurisé : Orange Money | MTN MoMo | Wave</span>
+    <span>Besoin d’aide ? Contactez-nous</span>
+  </div>
+
+  <header class="header">
+    <a class="brand" href="#accueil" aria-label="Style&Tech accueil">
+      <span class="brand-icon">🛒</span>
+      <span><strong>Style<span>&</span>Tech</strong><small>Votre style, notre priorité</small></span>
+    </a>
+    <form class="search" id="searchForm">
+      <input id="searchInput" type="search" placeholder="Rechercher un article, une catégorie..." aria-label="Rechercher">
+      <button aria-label="Lancer la recherche">⌕</button>
+    </form>
+    <div class="header-actions">
+      <a href="#produits">♡ <span>Mes favoris</span></a>
+      <a href="#panier">🛒 <span>Panier (<b id="cartCount">0</b>)</span></a>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <a class="side-link active" href="#accueil">⌂ <span>Accueil</span></a>
+      <a class="side-link" href="#categories">👕 <span>Vêtements</span></a>
+      <a class="side-link" href="#categories">📱 <span>Téléphones & accessoires</span></a>
+      <a class="side-link" href="#categories">⌚ <span>Montres</span></a>
+      <a class="side-link" href="#categories">👜 <span>Sacs & chaînes</span></a>
+      <a class="side-link" href="#categories">🌸 <span>Parfums</span></a>
+      <a class="side-link" href="#categories">💻 <span>Ordinateurs portables</span></a>
+      <a class="side-link" href="#services">🚚 <span>Service de livraison</span></a>
+      <a class="side-link" href="#services">✂️ <span>Coiffure à domicile</span></a>
+      <div class="promo">
+        <strong>🎁 Des offres spéciales à ne pas manquer !</strong>
+        <a href="#produits" class="button button-dark">Voir les promotions →</a>
+      </div>
+    </aside>
+
+    <main>
+      <section class="hero" id="accueil">
+        <div class="hero-copy">
+          <p class="eyebrow">MODE, TECH & LIFESTYLE</p>
+          <h1>Tout ce dont vous avez besoin, au même endroit !</h1>
+          <p>Vêtements, téléphones, montres, sacs, parfums, ordinateurs et bien plus encore...</p>
+          <a class="button button-gold" href="#categories">Découvrir la boutique <span>→</span></a>
+        </div>
+        <div class="hero-art" aria-label="Mode et technologie">
+          <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=700&q=85" alt="Montre élégante">
+          <img src="https://images.unsplash.com/photo-1511704518677-bd4f8c6f4a3d?auto=format&fit=crop&w=600&q=85" alt="Téléphone portable">
+          <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=700&q=85" alt="Ordinateur portable">
+        </div>
+        <div class="hero-benefits">
+          <span>🚚 <b>Livraison rapide</b><small>et sécurisée</small></span>
+          <span>🛡️ <b>Paiement sécurisé</b></span>
+          <span>🎧 <b>Service client</b><small>à votre écoute</small></span>
+        </div>
+      </section>
+
+      <section id="categories" class="section">
+        <div class="category-grid">
+          <a class="category-tile" href="#produits" data-category="Vêtements"><span>👕</span><b>Vêtements</b><small>Style pour tous</small></a>
+          <a class="category-tile" href="#produits" data-category="Téléphones"><span>📱</span><b>Téléphones</b><small>Modèles à venir</small></a>
+          <a class="category-tile" href="#produits" data-category="Montres"><span>⌚</span><b>Montres</b><small>Élégance au poignet</small></a>
+          <a class="category-tile" href="#produits" data-category="Sacs"><span>👜</span><b>Sacs & chaînes</b><small>Classiques et tendance</small></a>
+          <a class="category-tile" href="#produits" data-category="Parfums"><span>🌸</span><b>Parfums</b><small>Des senteurs uniques</small></a>
+          <a class="category-tile" href="#produits" data-category="Ordinateurs"><span>💻</span><b>Ordinateurs</b><small>Performance & mobilité</small></a>
+          <a class="category-tile" href="#services"><span>🚚</span><b>Livraison</b><small>Rapide et fiable</small></a>
+          <a class="category-tile" href="#services"><span>💇🏽</span><b>Coiffure à domicile</b><small>Beauté chez vous</small></a>
+        </div>
+      </section>
+
+      <section class="section" id="produits">
+        <div class="section-heading">
+          <div><p class="eyebrow dark-eyebrow">LA SÉLECTION DU MOMENT</p><h2>🔥 Nos produits phares</h2></div>
+          <button class="text-button" id="showAll">Voir tous les produits →</button>
+        </div>
+        <div id="productGrid" class="product-grid"></div>
+        <p id="emptyMessage" class="empty hidden">Aucun article ne correspond à votre recherche.</p>
+      </section>
+
+      <section class="section" id="services">
+        <div class="section-heading">
+          <div><p class="eyebrow dark-eyebrow">BIEN PLUS QU’UNE BOUTIQUE</p><h2>Nos services</h2></div>
+        </div>
+        <div class="service-grid">
+          <article class="service-card pink"><span>👗</span><div><h3>Vêtements</h3><p>Découvrez les dernières collections.</p><a href="#produits">Acheter maintenant →</a></div></article>
+          <article class="service-card blue"><span>📱</span><div><h3>Téléphones</h3><p>Les nouveautés seront ajoutées dès disponibilité.</p><a href="#contact">Être informé →</a></div></article>
+          <article class="service-card orange"><span>⌚</span><div><h3>Montres, sacs & chaînes</h3><p>Élégance et style au meilleur prix.</p><a href="#produits">Voir la collection →</a></div></article>
+          <article class="service-card purple"><span>🌺</span><div><h3>Parfums</h3><p>Des senteurs pour toutes les occasions.</p><a href="#produits">Voir les parfums →</a></div></article>
+          <article class="service-card green"><span>💻</span><div><h3>Ordinateurs portables</h3><p>Travaillez, étudiez, restez connecté.</p><a href="#contact">Voir les ordinateurs →</a></div></article>
+          <article class="service-card yellow"><span>🛵</span><div><h3>Livraison</h3><p>Livraison à organiser selon votre zone.</p><a href="#contact">En savoir plus →</a></div></article>
+          <article class="service-card rose"><span>💇🏽</span><div><h3>Coiffure à domicile</h3><p>Beauté et style chez vous.</p><a href="#contact">Demander un rendez-vous →</a></div></article>
+        </div>
+      </section>
+
+      <section class="section cart-section" id="panier">
+        <div class="section-heading"><div><p class="eyebrow dark-eyebrow">VOTRE SÉLECTION</p><h2>🛒 Mon panier</h2></div></div>
+        <div class="cart-box">
+          <div id="cartItems"><p>Votre panier est vide pour le moment.</p></div>
+          <div class="cart-bottom"><strong id="cartTotal">Total : 0 FCFA</strong><button class="button button-gold" id="checkout">Continuer la commande</button></div>
+          <p class="note">Démo : cette version ne transmet pas encore de commande et ne débite aucun paiement.</p>
+          <p id="cartMessage" aria-live="polite"></p>
+        </div>
+      </section>
+
+      <section class="section contact" id="contact">
+        <h2>Une question ou une demande de service ?</h2>
+        <p>Contactez-nous pour la disponibilité des articles, la livraison ou la coiffure à domicile.</p>
+        <a class="button button-gold" href="mailto:contact@styleandtech.example">Nous contacter</a>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <a class="brand footer-brand" href="#accueil"><span class="brand-icon">🛒</span><span><strong>Style<span>&</span>Tech</strong><small>Votre style, notre priorité</small></span></a>
+    <div class="footer-links"><a href="#accueil">Accueil</a><a href="#produits">Boutique</a><a href="#services">Services</a><a href="#contact">Contact</a></div>
+    <p>© 2026 Style&Tech. Tous droits réservés.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
